@@ -1,5 +1,5 @@
 #!/usr/bin/python3
 num = 97
-while digit < 123
-    print(f"{chr(digit)}")
-    digit++
+while num < 123:
+    print(chr(num))
+    num = num + 1
