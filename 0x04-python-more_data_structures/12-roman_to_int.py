@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 def roman_to_int(roman_string):
-    if type(roman_string) == str:
+    if type(roman_string) == str and roman_string:
         result = 0
         for i in roman_string:
             if i == 'I':
