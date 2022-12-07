@@ -1,22 +1,26 @@
 #!/usr/bin/python3
 def roman_to_int(roman_string):
     if type(roman_string) == str and roman_string:
-        result = 0
+        result = []
         for i in roman_string:
             if i == 'I':
-                result += 1
+                result.append(1)
             elif i == 'V':
-                result += 5
+                result.append(5)
             elif i == 'X':
-                result += 10
+                result.append(10)
             elif i == 'L':
-                result += 50
+                result.append(50)
             elif i == 'C':
-                result += 100
+                result.append(100)
             elif i == 'D':
-                result += 500
+                result.append(500)
             elif i == 'M':
-                result += 1000
-        return result
+                result.append(1000)
+        for i in range(len(result)):
+            if i != len(result) - 1:
+                if result[i] < result[i + 1]:
+                    result[i] = -result[i]
+        return sum(result)
     else:
         return 0
