@@ -73,13 +73,13 @@ class Square:
         if self.__size == 0:
             return ""
 
-        result = ""
+        output = ""
         for i in range(self.__position[1]):
-            result += "\n"
+            output += "\n"
 
         for i in range(self.__size):
-            result += " " * self.__position[0]
-            result += "#" * self.__size
-            result += "\n"
+            output += " " * self.__position[0]
+            output += "#" * self.__size
+            output += "\n"
 
-        return result
+        return output[:-1]
