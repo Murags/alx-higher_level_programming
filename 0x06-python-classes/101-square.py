@@ -10,7 +10,7 @@ class Square:
 
             Args:
                 size: size of square
-                position: tuple of 2 positive integers representing the position of the square
+                position: tuple of 2 positive integers
         """
         self.size = size
         self.position = position
