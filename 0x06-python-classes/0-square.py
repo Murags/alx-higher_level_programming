@@ -1,6 +1,7 @@
 #!/usr/bin/python3
-"""
-This class does nothing
-"""
+"""This class declares a square"""
+
+
 class Square:
+    """Declares square"""
     pass
