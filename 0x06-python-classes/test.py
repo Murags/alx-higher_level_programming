@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""Declares a square"""
+"""Daclares a square"""
+
 
 class Square:
     """Represents a square"""
@@ -9,7 +10,7 @@ class Square:
 
             Args:
                 size: size of square
-                position: tuple of 2 positive integers representing the position of the square
+
         """
         self.size = size
         self.position = position
@@ -44,26 +45,22 @@ class Square:
         self.__position = value
 
     def area(self):
-        """Get the area of the square
+        """Area of the square
 
             Return:
                 Area of the square
         """
-        return self.__size ** 2
+        return self._Square__size ** 2
 
     def my_print(self):
-        """Print the square with # characters
-
-            Prints an empty line if the size of the square is 0.
-        """
-        if self.__size == 0:
-            print()
-            return
-
+        """prints a square with # characters"""
         for i in range(self.__position[1]):
             print()
-
         for i in range(self.__size):
-            print(" " * self.__position[0], end="")
-            print("#" * self.__size)
-
+            for j in range(self.__position[0]):
+                print(" ", end="")
+            for j in range(self.__size):
+                print("#", end="")
+            print()
+        if self.__size == 0:
+            print()
