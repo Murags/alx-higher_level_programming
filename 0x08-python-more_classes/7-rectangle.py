@@ -60,7 +60,7 @@ class Rectangle:
             return ""
         output = ""
         for i in range(self.__height):
-            output += ("#" * self.__width)
+            output += (print_symbol * self.__width)
             if i != self.__height - 1:
                 output += "\n"
         return output
