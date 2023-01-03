@@ -63,7 +63,7 @@ class Rectangle:
         return output
     def __repr__(self):
         """Return string representation of the Rectangle object"""
-        return 'Rectangle({}, {})'.format(self.width), self.height)
+        return 'Rectangle({}, {})'.format(self.width, self.height)
 
     def __del__(self):
         """Prints this when rectangle id deleted"""
