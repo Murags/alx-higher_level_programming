@@ -23,4 +23,3 @@ class Square(Rectangle):
         """Represent string method."""
         return "[Square] " + \
             str(self.__size) + "/" + str(self.__size)
-
