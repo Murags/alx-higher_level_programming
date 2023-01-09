@@ -21,6 +21,6 @@ class Square(Rectangle):
 
     def __str__(self):
         """Represent string method."""
-        return "[square] " + \
+        return "[Square] " + \
             str(self.__size) + "/" + str(self.__size)
 
