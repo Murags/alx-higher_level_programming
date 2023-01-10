@@ -5,6 +5,6 @@
 def read_file(filename=""):
     """prints contente of file"""
 
-    with open(filename, encoding="utf-8") as f:
+    with open(filename, "r", encoding="utf-8") as f:
         print("{}".format(f.read()))
     f.closed
