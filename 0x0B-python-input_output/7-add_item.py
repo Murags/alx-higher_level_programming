@@ -10,9 +10,10 @@ if __name__ == "__main__":
     data = []
     try:
         data = load_from_json_file("add_items.json")
-    except Exception:
-        pass
-    finally:
+        for item in sys.argv[1:]:
+            data.append(item)
+        save_to_json_file(data, "add_item.json")
+    except Exception:	
         for item in sys.argv[1:]:
             data.append(item)
         save_to_json_file(data, "add_item.json")
