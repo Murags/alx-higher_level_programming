@@ -10,7 +10,7 @@ if __name__ == "__main__":
 
     try:
         data = load_from_json_file("add_items.json")
-    except FileNotFoundError:
+    except Exception:
         data = []
 
     for item in sys.argv[1:]:
