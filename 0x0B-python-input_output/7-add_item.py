@@ -9,11 +9,11 @@ if __name__ == "__main__":
 
     data = []
     try:
-        data = load_from_json_file("add_items.json")
+        data = load_from_json_file("add_item.json")
         for item in argv[1:]:
             data.append(item)
         save_to_json_file(data, "add_item.json")
     except FileNotFoundError:
         for item in argv[1:]:
             data.append(item)
-        save_to_json_file(data, "add_item.json")
+        save_to(data, "add_item.json")
