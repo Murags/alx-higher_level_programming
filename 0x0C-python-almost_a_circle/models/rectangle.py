@@ -81,3 +81,9 @@ class Rectangle(Base):
         """Print rectangle"""
         for _ in range(self.height):
             print("#" * self.width)
+
+    def __str__(self):
+        """Overides string method"""
+        return "[{}] ({}) {}/{} - {}/{}".format(type(self).__name__, self.id,
+                                                self.__x, self.__y,
+                                                self.__width, self.__height)
