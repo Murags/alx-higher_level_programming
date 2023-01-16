@@ -74,7 +74,7 @@ class Rectangle(Base):
         self.__y = value
 
     def area(self):
-        """Return area of recctangle"""
+        """Return area of rectangle"""
         return self.width * self.height
 
     def display(self):
@@ -90,7 +90,7 @@ class Rectangle(Base):
                                                 self.__x, self.__y,
                                                 self.__width, self.__height)
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """Updates attributes"""
         i = 0
         if args and len(args) != 0:
@@ -106,3 +106,16 @@ class Rectangle(Base):
                 if i == 4:
                     self.y = arg
                 i += 1
+        else:
+            if kwargs:
+                for key, value in kwargs.items():
+                    if key == "id":
+                        self.id = value
+                    if key == "width":
+                        self.width = value
+                    if key == "height":
+                        self.height = value
+                    if key == "x":
+                        self.x = value
+                    if key == "y":
+                        self.y = value
