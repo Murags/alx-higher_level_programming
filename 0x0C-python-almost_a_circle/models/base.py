@@ -53,7 +53,7 @@ class Base:
         dummy.update(**dictionary)
         return dummy
 
-   @classmethod
+    @classmethod
     def load_from_file(cls):
         """Returns a list of instances"""
         filename = str(cls.__name__) + ".json"
@@ -65,5 +65,5 @@ class Base:
                 data = cls.from_json_string(f.read())
 
             for i in data:
-                result.append(cls.create(**dictionary))
+                result.append(cls.create(**i))
             return result
