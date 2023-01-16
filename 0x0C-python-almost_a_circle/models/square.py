@@ -25,3 +25,22 @@ class Square(Rectangle):
         """representation of Square."""
         return "[Square] ({}) {}/{} - {}".format(self.id, self.x, self.y,
                                                  self.width)
+    def update(self, *args, **kwargs):
+        """Updates attributes"""
+        i = 0
+        if args and len(args) != 0:
+            for arg in args:
+                if i == 0:
+                    self.id = arg
+                if i == 1:
+                    self.size = arg
+                if i == 2:
+                    self.x = arg
+                if i == 3:
+                    self.y = arg
+                i += 1
+        else:
+            if kwargs:
+                for key, value in kwargs.items():
+                    if hasattr(self, key):
+                        setattr(self, key, value)
