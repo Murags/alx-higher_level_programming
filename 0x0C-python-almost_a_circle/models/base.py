@@ -16,9 +16,10 @@ class Base:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
 
+    @staticmethod
     def to_json_string(list_dictionaries):
         """Return string representation"""
         if list_dictionaries:
             return json.dumps(list_dictionaries)
-        elif list_dictionaries is None:
+        else:
             return "[]"
