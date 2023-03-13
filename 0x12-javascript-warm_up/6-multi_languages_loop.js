@@ -1,5 +1,3 @@
 #!/usr/bin/node
-let lines = ['C is fun', 'Python is cool', 'JavaScript is amaizing'];
-for (line of lines) {
-  console.log(line);
-}
+const lines = ['C is fun', 'Python is cool', 'JavaScript is amazing'];
+lines.forEach(element => console.log(element));

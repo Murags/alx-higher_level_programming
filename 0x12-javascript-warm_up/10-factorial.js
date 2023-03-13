@@ -1,7 +1,7 @@
 #!/usr/bin/node
 const argv = process.argv;
 const factorial = (num) => {
-  if(num != 1) {
+  if (num !== 1) {
     return num * factorial(num - 1);
   } else {
     return 1;
