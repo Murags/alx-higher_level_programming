@@ -5,5 +5,5 @@ if (argv.length === 0) {
   console.log('0');
 } else {
   argv.sort((a, b) => a - b);
-  console.log(+argv[argv.length - 2]);
+  console.log(argv[argv.length - 2]);
 }
