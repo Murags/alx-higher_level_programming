@@ -26,12 +26,16 @@ class Rectangle {
 class Square extends Rectangle {
   constructor (size) {
     super(size, size);
+    this.size = size;
   }
 
   charPrint (c) {
-    c = c === undefined ? 'X' : c;
-    for (let i = 0; i < this.width; i++) {
-      console.log(`${c.repeat(this.width)}`);
+    if (c === undefined) {
+      this.print();
+    }else {
+      for (let i = 0; i < this.size; i++) {
+        console.log(`${c.repeat(this.size)}`);
+      }
     }
   }
 }
