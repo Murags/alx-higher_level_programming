@@ -30,7 +30,7 @@ class Square extends Rectangle {
 
   charPrint (c) {
     c = c === undefined ? 'X' : c;
-    for (let i = 0; i < this.height; i++) {
+    for (let i = 0; i < this.width; i++) {
       console.log(`${c.repeat(this.width)}`);
     }
   }
