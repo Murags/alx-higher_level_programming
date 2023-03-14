@@ -1,40 +1,11 @@
 #!/usr/bin/node
-class Rectangle {
-  constructor (w, h) {
-    if (w > 0 && h > 0) {
-      this.width = w;
-      this.height = h;
-    }
-  }
+const Parent = require('./5-square.js')
 
-  print () {
-    for (let i = 0; i < this.height; i++) {
-      console.log(`${'X'.repeat(this.width)}`);
-    }
-  }
-
-  rotate () {
-    [this.height, this.width] = [this.width, this.height];
-  }
-
-  double () {
-    this.width *= 2;
-    this.height *= 2;
-  }
-}
-
-class Square extends Rectangle {
-  constructor (size) {
-    super(size, size);
-  }
-
+class Square extends Parent {
   charPrint (c) {
-    if (c === undefined) {
-      this.print();
-    }else {
-      for (let i = 0; i < this.height; i++) {
-        console.log(`${c.repeat(this.width)}`);
-      }
+    c = c === undefined ? 'X' : c;
+    for (let i = 0; i < this.height; i++) {
+      console.log(`${c.repeat(this.width)}`);
     }
   }
 }
