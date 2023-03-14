@@ -1,5 +1,5 @@
 #!/usr/bin/node
-const Parent = require('./5-square.js')
+const Parent = require('./5-square.js');
 
 class Square extends Parent {
   charPrint (c) {
