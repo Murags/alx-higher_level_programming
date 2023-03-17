@@ -1,19 +1,18 @@
 #!/usr/bin/python3
-"""Module to connect to datbase"""
+""" Script to connect to MySQL server on localhost at port 3306
+"""
 import MySQLdb
 import sys
 
 
 if __name__ == "__main__":
     user_name, password, db_name = sys.argv[1:]
-    database = MySQLdb.connect(host='localhost', port=3306, user=user_name,
+    conn = MySQLdb.connect(host='localhost', port=3306, user=user_name,
                            passwd=password, db=db_name, charset="utf8")
-    curr = database.cursor()
-    curr.execute('SELECT * FROM states ORDER BY id ASC')
-    data = curr.fetchall()
-
-    for state in data:
-        print(state)
-
-    curr.close()
-    database.close()
+    cur = conn.cursor()
+    cur.execute("SELECT * FROM states ORDER BY id ASC")
+    data = cur.fetchall()
+    for row in data:
+        print(row)
+    cur.close()
+    conn.close()
