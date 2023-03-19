@@ -17,11 +17,11 @@ def main():
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    cities = session.query(State, City)\
-        .filter(State.id == City.state_id).order_by(City.id)
-
+    cities = session.query(City, State).join(State).order_by(City.id).all()
     for city, state in cities:
         print("{}: ({}) {}".format(state.name, city.id, city.name))
+
+    session.close()
 
 
 if __name__ == '__main__':
