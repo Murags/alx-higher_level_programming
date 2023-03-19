@@ -10,7 +10,7 @@ def main():
                                user=argv[1], passwd=argv[2], db=argv[3])
     curr = database.cursor()
     query = "SELECT * FROM states WHERE BINARY name='{}'ORDER BY id ASC"
-    curr.execute(query.format(search))
+    curr.execute(query.format(argv[4]))
     data = curr.fetchall()
     for state in data:
         print(state)
