@@ -9,14 +9,15 @@ def main():
     database = MySQLdb.connect(host="localhost", port=3306,
                                user=argv[1], passwd=argv[2], db=argv[3])
     curr = database.cursor()
-    qry = 'SELECT * FROM states WHERE name = "{}" ORDER BY id ASC'.format(argv[4])
-    curr.execute(qry)
+    query = "SELECT * FROM states WHERE BINARY name='{}'ORDER BY id ASC"
+    curr.execute(query.format(search))
     data = curr.fetchall()
     for state in data:
         print(state)
 
     curr.close()
     database.close()
+
 
 if __name__ == '__main__':
     main()
