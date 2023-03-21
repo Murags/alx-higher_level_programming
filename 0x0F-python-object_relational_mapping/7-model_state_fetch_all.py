@@ -18,6 +18,8 @@ def main():
 
     states = session.query(State).order_by(State.id).all()
 
+    print(states)
+
     for state in states:
         print("{}: {}".format(state.id, state.name))
 
