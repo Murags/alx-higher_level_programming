@@ -11,6 +11,7 @@ def main():
     x_request_id = response.headers.get('X-Request-Id')
     print(x_request_id)
 
+
 if __name__ == '__main__':
     """prevent execution on import"""
     main()
