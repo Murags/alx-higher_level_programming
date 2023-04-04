@@ -14,13 +14,11 @@ def main():
     """Opens URL and reads data"""
     url = argv[1]
 
-    try:
-        response = get(url)
-        response.raise_for_status()
-        body = response.text
-        print(body)
-    except Exception as e:
-        print("Error code: {}".format(e))
+    response = get(url)
+    if response.status_code < 400:
+        print(response.content.decode())
+    else:
+        print("Error code: {}".format(response.status_code))
 
 
 if __name__ == '__main__':
