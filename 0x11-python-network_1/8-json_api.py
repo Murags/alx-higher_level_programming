@@ -1,8 +1,7 @@
 #!/usr/bin/python3
 """
 Send a POST request with a JSON body containing
-a dictionary with a key of 'q' and a value taken
-from the command-line arguments
+a dictionary with a key of 'q' and a value taken from the command-line arguments
 """
 from requests import post
 from sys import argv
