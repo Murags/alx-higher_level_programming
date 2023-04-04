@@ -7,7 +7,7 @@ def main():
     """Opens url and reads data
     """
     response = requests.get('https://alx-intranet.hbtn.io/status')
-    data = response.content
+    data = response.content.decode()
 
     print('Body response:')
     print('\t- type:', type(data))
