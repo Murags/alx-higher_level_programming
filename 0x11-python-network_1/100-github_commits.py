@@ -12,9 +12,9 @@ def main():
     response = get(url)
 
     data = response.json()
-    i = 1
+    i = 0
     for commit in data:
-        print("{} {}".format(commit["sha"], commit['commit']['author']['name']))
+        print("{} {}".format(commit['sha'], commit['commit']['author']['name']))
         i += 1
         if i == 10:
             break
