@@ -20,5 +20,11 @@ request(argv[2], (err, response, body) => {
       taskId[task.userId]++;
     }
   }
+  for (const user in taskId) {
+    if (taskId[user] === 0) {
+      delete taskId[user];
+    }
+  }
+
   console.log(taskId);
 });
